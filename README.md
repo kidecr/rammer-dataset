@@ -1,32 +1,30 @@
-当然可以，以下是您提供的 `README.md` 文件的完整英文翻译版本，已根据学术惯例和数据集发布标准进行了润色和规范化：
-
----
-
 # Rammer Pit LiDAR Point Cloud Dataset
+
+[中文版](https://github.com/kidecr/rammer-dataset/blob/main/README_zh.md) | [English](https://github.com/kidecr/rammer-dataset/blob/main/README.md)
 
 **Version:** 1.0
 
 ## Introduction
 
-This is the first publicly available 3D point cloud dataset specifically collected and constructed for the study of rammer pits in Dynamic Compaction (DC) engineering projects. The dataset aims to support and advance research in LiDAR-based automated settlement measurement, rammer pit detection, ground segmentation, and related point cloud processing tasks. It is released alongside the paper *“LiDAR-Based Auto-Measurement for Rammer Settlement”*, in which key algorithms — including Two-Stage RANSAC Ground Fitting (TS-RGF) and Elevation-Constrained Pit Clustering (ECPC) — were developed and validated using this dataset.
+This is the first publicly available 3D point cloud dataset specifically collected and constructed for the study of rammer pits in Dynamic Compaction (DC) engineering projects. The dataset aims to support and advance research in LiDAR-based automated settlement measurement, rammer pit detection, ground segmentation, and related point cloud processing tasks. It is released alongside the paper *LiDAR-Based Auto-Measurement for Rammer Settlement*, in which key algorithms — including Two-Stage RANSAC Ground Fitting (TS-RGF) and Elevation-Constrained Pit Clustering (ECPC) — were developed and validated using this dataset.
 
 ## Dataset Composition
 
 The dataset comprises LiDAR point cloud sequences captured from three distinct geographical locations and operational scenarios, designed to evaluate algorithm robustness under varying geological and environmental conditions:
 
-1. **Xi’an, Shaanxi — Simulated Data**
+1. **Xi'an, Shaanxi — Simulated Data** (`陕西西安/`)
    - **Description:** Artificially excavated pits simulating rammer impacts.
-   - **Count:** 39 data sequences.
+   - **Count:** 39 data sequences across three collection dates (2024.10.13, 2024.10.25, 2024.12.14).
    - **Features:** Systematic variation in pit depth and diameter, enabling preliminary algorithm validation under controlled, low-vibration conditions.
 
-2. **Luoyang, Henan — Field Data (Per-Drop Recording)**
+2. **Luoyang, Henan — Field Data (Per-Drop Recording)** (`河南洛阳/`)
    - **Description:** Real-world rammer pit data captured at active construction sites.
    - **Count:** 14 sequences, collected from 2 distinct rammer pits (Pit 1: 8 drops, Pit 2: 6 drops).
    - **Features:** Each drop (from hammer descent to lift) is recorded as a separate `.lvx` file.
 
-3. **Zhongwei, Ningxia — Field Data (Full-Cycle Recording)**
+3. **Zhongwei, Ningxia — Field Data (Full-Cycle Recording)** (`宁夏中卫/`)
    - **Description:** Real-world rammer pit data captured at active construction sites.
-   - **Count:** 50 sequences, collected from 10 distinct rammer pits.
+   - **Count:** 50 sequences from 10 distinct rammer pits.
    - **Features:** Each recording captures the complete dynamic compaction cycle from initiation to completion. **This subset served as the primary experimental validation data in the associated paper.**
 
 ## Data Content
@@ -39,17 +37,39 @@ The dataset comprises LiDAR point cloud sequences captured from three distinct g
 
 ## File Format
 
-- Raw point cloud data are stored in **`.lvx`** format — Livox’s proprietary data format.
+- Raw point cloud data are stored in **`.lvx`** format — Livox's proprietary data format.
 - To view and process `.lvx` files, please use **Livox Viewer** software.
-  - Download: [https://www.livoxtech.com/cn/downloads](https://www.livoxtech.com/cn/downloads)
-- Ground truth and metadata (including manually measured depths, settlement values, and initial Euler angles) are provided in **`.xlsx`** (Excel) format.
+  - Download: [Livox_Viewer_For_Linux_Ubuntu16.04_x64_0.10.0.tar.gz](https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Download/update/Livox_Viewer_For_Linux_Ubuntu16.04_x64_0.10.0.tar.gz)
+- Ground truth is provided in **`.xlsx`** (Excel) format in each subdirectory.
 
 ## Data Download
 
-Due to the large file size of the dataset, it is shared via **Baidu Cloud (百度网盘)**.
+Due to the large file size of the dataset, it is released via GitHub Releases. Please download from the following link:
 
-- **Baidu Cloud Link:** [https://pan.baidu.com/s/XXXXXXXXXXX](https://pan.baidu.com/s/XXXXXXXXXXX)
-- **Extraction Code:** `XXXX`
+**[Download Rammer Pit LiDAR Point Cloud Dataset v1.0](https://github.com/kidecr/rammer-dataset/releases/tag/dataset)**
+
+You can also clone this repository (which contains only the README files):
+
+```bash
+git clone https://github.com/kidecr/rammer-dataset.git
+```
+
+### Dataset Structure
+```
+rammer-dataset/
+├── 宁夏中卫/            # Zhongwei, Ningxia (Field Data - Full-Cycle)
+│   ├── 1号坑5锤.lvx
+│   ├── 2号坑1锤.lvx
+│   └── ...
+├── 河南洛阳/            # Luoyang, Henan (Field Data - Per-Drop)
+│   ├── 强夯1号坑第一锤.lvx
+│   ├── 强夯1号坑第二锤.lvx
+│   └── ...
+└── 陕西西安/            # Xi'an, Shaanxi (Simulated Data)
+    ├── 2024.10.13/
+    ├── 2024.10.25/
+    └── 2024.12.14/
+```
 
 ## License
 
@@ -65,6 +85,10 @@ If you use this dataset in your research or publications, please cite the follow
   author={Wang, M. and others},
   journal={Preprint submitted to Elsevier},
   year={2024},
-  url={https://github.com/kidecr/rammer-dataset.git}
+  url={https://github.com/kidecr/rammer-dataset}
 }
 ```
+
+## Contact
+
+For questions or issues related to this dataset, please open an issue on GitHub or contact the authors.
