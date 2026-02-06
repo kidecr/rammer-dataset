@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This is the first publicly available 3D point cloud dataset specifically collected and constructed for the study of rammer pits in Dynamic Compaction (DC) engineering projects. The dataset aims to support and advance research in LiDAR-based automated settlement measurement, rammer pit detection, ground segmentation, and related point cloud processing tasks. It is released alongside the paper *LiDAR-Based Auto-Measurement for Rammer Settlement*, in which key algorithms — including Two-Stage RANSAC Ground Fitting (TS-RGF) and Elevation-Constrained Pit Clustering (ECPC) — were developed and validated using this dataset.
+This is a publicly available 3D point cloud dataset specifically collected and constructed for the study of rammer pits in Dynamic Compaction (DC) engineering projects. The dataset aims to support and advance research in LiDAR-based automated settlement measurement, rammer pit detection, and related point cloud processing tasks. It is released alongside the paper *LiDAR-Based Auto-Measurement for Rammer Settlement*, in which key algorithms — including Two-Stage RANSAC Ground Fitting (TS-RGF) and Elevation-Constrained Pit Clustering (ECPC) — were developed and validated using this dataset.
 
 ## Dataset Composition
 
@@ -39,7 +39,7 @@ The dataset comprises LiDAR point cloud sequences captured from three distinct g
 
 - Raw point cloud data are stored in **`.lvx`** format — Livox's proprietary data format.
 - To view and process `.lvx` files, please use **Livox Viewer** software.
-  - Download: [Livox_Viewer_For_Linux_Ubuntu16.04_x64_0.10.0.tar.gz](https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Download/update/Livox_Viewer_For_Linux_Ubuntu16.04_x64_0.10.0.tar.gz)
+  - Download: [Livox Viewer](https://www.livoxtech.com/cn/downloads)
 - Ground truth is provided in **`.xlsx`** (Excel) format in each subdirectory.
 
 ## Data Download

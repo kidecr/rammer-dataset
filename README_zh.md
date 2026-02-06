@@ -6,7 +6,7 @@
 
 ## 简介
 
-本数据集是首个专门为强夯工程中夯坑深度研究而采集和构建的三维点云数据集。该数据集旨在支持和促进基于LiDAR的自动化夯沉量测量、夯坑检测、地面分割等领域的研究。数据集随论文《LiDAR-Based Auto-Measurement for Rammer Settlement》一同发布，论文中提出的"两阶段RANSAC地面拟合"(TS-RGF)和"高程约束坑聚类"(ECPC)等算法均在此数据集上进行了验证。
+本数据集是专门为强夯工程中夯坑深度研究而采集和构建的三维点云数据集。该数据集旨在支持和促进基于LiDAR的自动化夯沉量测量、夯坑检测等领域的研究。数据集随论文《LiDAR-Based Auto-Measurement for Rammer Settlement》一同发布，论文中提出的"两阶段RANSAC地面拟合"(TS-RGF)和"高程约束坑聚类"(ECPC)等算法均在此数据集上进行了验证。
 
 ## 数据集构成
 
@@ -39,7 +39,7 @@
 
 - 原始点云数据格式为 **`.lvx`**。
 - 此格式为Livox官方数据格式，需使用 **Livox Viewer** 软件进行查看和处理。
-- 软件下载地址: [Livox_Viewer_For_Linux_Ubuntu16.04_x64_0.10.0.tar.gz](https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Download/update/Livox_Viewer_For_Linux_Ubuntu16.04_x64_0.10.0.tar.gz)
+- 软件下载地址: [Livox Viewer](https://www.livoxtech.com/cn/downloads)
 - 真实值数据存储在各子目录的 `.xlsx` 文件中，包含每次测量的手动测量深度、欧拉角等信息。
 
 ## 数据下载
